@@ -3,8 +3,6 @@
 A simple, interactive web project developed using **HTML5**, **CSS3**, and **modern JavaScript (ES6)** for basic user management,
 with data persistence handled via the browser's `localStorage`.
 
-Website Link: 
-
 ---
 
 ## 🚀 Features
