@@ -1,55 +1,57 @@
-# 📋 Sistema de Cadastro e Login (Formulário)
+# 📋 Registration and Login System (Form)
 
-Um projeto web simples e interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript moderno (ES6)** para gerenciamento básico de usuários,
-com persistência de dados utilizando o `localStorage` do navegador.
+A simple, interactive web project developed using **HTML5**, **CSS3**, and **modern JavaScript (ES6)** for basic user management,
+with data persistence handled via the browser's `localStorage`.
 
----
-
-## 🚀 Funcionalidades
-
-* **Criar Conta (`form_sign_up.html`):** 
-  * Cadastro de novos usuários informando Nome, Nome de Usuário, E-mail e Senha.
-  * Validação de campos obrigatórios e confirmação de senha.
-  * Verificação automática para evitar duplicidade de e-mail ou nome de usuário.
-* **Fazer Login (`form_log_in.html`):**
-  * Autenticação utilizando Nome de Usuário ou E-mail e Senha.
-  * Mensagens de erro dinâmicas em caso de credenciais incorretas ou campos vazios.
-* **Página Inicial (`main_page.html`):**
-  * Painel de boas-vindas personalizado que exibe as informações do usuário autenticado após o login.
-  * Opção de encerramento de sessão (Logout).
-* **Persistência de Dados (`users.js`):**
-  * Armazenamento e resgate dos dados dos usuários direto no navegador via `localStorage`.
+Website Link: 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Features
 
-* **HTML5:** Estruturação semântica das páginas.
-* **CSS3:** Estilização customizada, flexbox e design responsivo.
-* **JavaScript (ES6 Modules):** Lógica de validação, manipulação do DOM e gerenciamento de estado dos usuários.
+* **Create Account (`form_sign_up.html`):**
+* Registration for new users, requiring Name, Username, Email, and Password. 
+* Validation of mandatory fields and password confirmation. 
+* Automatic checks to prevent duplicate emails or usernames.
+* **Log In (`form_log_in.html`):**
+* Authentication using either a Username or Email and a Password. 
+* Dynamic error messages for incorrect credentials or empty fields.
+* **Home Page (`main_page.html`):**
+* A personalized welcome dashboard that displays the authenticated user's information after logging in.
+* Option to end the session (Logout).
+* **Data Persistence (`users.js`):**
+* Storage and retrieval of user data directly within the browser using `localStorage`.
 
 ---
 
-## 📂 Estrutura de Pastas
+## 🛠️ Technologies Used
+
+* **HTML5:** Semantic structuring of pages.
+* **CSS3:** Custom styling, Flexbox, and responsive design.
+* **JavaScript (ES6 Modules):** Validation logic, DOM manipulation, and user state management.
+
+---
+
+## 📂 File Structure
 
 ```text
-Formulário/
+Form/
 │
-├── form_log_in.html       # Página de Login
-├── form_sign_up.html      # Página de Cadastro
-├── main_page.html         # Página Inicial / Painel do Usuário
+├── form_log_in.html       # Login page
+├── index.html             # Registration page
+├── main_page.html         # Home page / User dashboard
 │
 ├── styles/
-│   ├── header.css         # Estilos globais do cabeçalho
-│   ├── formulario.css     # Estilos dos formulários (Login/Cadastro)
-│   └── main_page.css      # Estilos da página principal
+│   ├── header.css         # Global header styles
+│   ├── form.css           # Form styles (Login/Registration)
+│   └── main_page.css      # Main page styles
 │
 └── scripts/
-    ├── form_log_in.js     # Lógica de autenticação e validação de login
-    ├── form_sign_up.js    # Lógica de registro de novos usuários
-    ├── main_page.js       # Lógica de exibição de dados do usuário logado
-    └── users.js           # Funções utilitárias e gerenciamento de armazenamento
+├── form_log_in.js     # Authentication and login validation logic
+├── sign_up.js         # Logic for registering new users
+├── main_page.js       # Logic for displaying logged-in user data
+└── users.js           # Utility functions and storage management
 ```
 
-## ⚠️ Nota de Segurança
-* **Aviso:** Este projeto utiliza a função nativa btoa() apenas para uma codificação básica de senha para fins educacionais e de estudo. Em aplicações reais de produção, utilize bibliotecas de criptografia robustas (como bcrypt) e um backend seguro.
+## ⚠️ Security Note
+* **Warning:** This project uses the native `btoa()` function solely for basic password encoding, intended for educational and study purposes. In real-world production applications, use robust cryptographic libraries (such as `bcrypt`) and a secure backend.
