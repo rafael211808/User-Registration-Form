@@ -2,7 +2,7 @@ import { users, getInputValue, setErrorMessage, saveToStorage } from "../data/us
 
 document.querySelector('.js-submit-button')
   .addEventListener('click', (event) => {
-    event.preventDefault(); // Impede o formulário de recarregar a página
+    event.preventDefault();
 
     const usernameEmail = getInputValue('js-username-email-input');
     const password = getInputValue('js-password-input');
@@ -17,7 +17,7 @@ document.querySelector('.js-submit-button')
 
     if (emptyInput) {
       const errorMessage = `<p class="error-message">
-        Todos os campos devem ser preenchidos.
+        All fields are required.
       </p>`;
 
       setErrorMessage(errorMessage);
@@ -25,14 +25,14 @@ document.querySelector('.js-submit-button')
 
     else if (!foundUser) {
       const errorMessage = `<p class="error-message">
-        Usuário ou e-mail não encontrado.
+        User or email not found.
       </p>`;
       setErrorMessage(errorMessage);
     }
 
     else if (foundUser.password !== btoa(password)) {
       const errorMessage = `<p class="error-message">
-        Senha incorreta, digite novamente.
+        Incorrect password. Please try again.
       </p>`;
 
       setErrorMessage(errorMessage);
