@@ -2,7 +2,7 @@ import { users, getInputValue, setErrorMessage, saveToStorage, } from "../data/u
 
 document.querySelector('.js-submit-button')
   .addEventListener('click', (event) => {
-    event.preventDefault(); // Impede o formulário de recarregar a página
+    event.preventDefault(); 
 
     const name = getInputValue('js-name-input');
     const username = getInputValue('js-username-input');
@@ -20,7 +20,7 @@ document.querySelector('.js-submit-button')
 
     if (emptyInput) {
       const errorMessage = `<p class="error-message">
-        Todos os campos devem ser preenchidos.
+        All fields are required.
       </p>`;
 
       setErrorMessage(errorMessage);
@@ -28,7 +28,7 @@ document.querySelector('.js-submit-button')
     
     else if (password !== confirmation) {
       const errorMessage = `<p class="error-message">
-        Os campos Senha e Confirmar Senha devem ser iguais, digite novamente.
+        Passwords do not match. Please try again.
       </p>`;
 
       setErrorMessage(errorMessage);
@@ -36,7 +36,7 @@ document.querySelector('.js-submit-button')
 
     else if (foundUser) {
       const errorMessage = `<p class="error-message">
-        Nome de Usuário ou E-mail já existe, tente novamente ou faça o login.
+        Username or email already exists. Please try again or log in.
       </p>`;
 
       setErrorMessage(errorMessage);
